@@ -6,11 +6,11 @@
     <title>Form</title>
 </head>
 <body>
-    <form method="post">
+    <form>
         <fieldset style="text-align: center">
             <legend style="text-align: center">User Details</legend>
             <label for="name">Enter your name:</label>
-            <input type="text" id="name" name="username">
+            <input type="text" id="name" name="username" value="john" readonly disabled>
             <br>
             <br>
             <label for="dob">Enter your DOB:</label>
@@ -21,23 +21,25 @@
             <textarea type="text" id="address" name="useraddress" row="2" cols="30"></textarea>
             <br>
             <br>
+            <label for="email">Enter your E-mail</label>
+            <input type="text" id="email" name="E-mail" placeholder="abc@gmail.com" autofocus>
             <fieldset style="width:300px">
                 Select Gender: <br>
                 <label for="male">male</label>
     <input type="radio" id="male" name="gender" value="male">
     <br>
     <label for="female">Female</label>
-    <input type="radio" id="female" name="gender" value-="Female">
+    <input type="radio" id="female" name="gender" value="Female">
     <br>
     <label for="other">Other</label>
-    <input type="radio" id="other" name="gender" value="other">
+    <input type="radio" id="other" name="gender" value="Other">
     <br>
             </fieldset>
             <br>
             <fieldset style="width:300px">   Hobby of yours:
                 <br>
                 <label for="swim">Swimming </label>
-                <input type="checkbox" id="swim" name="swim" value="Swimming">
+                <input type="checkbox" id="swim" name="swim" Value="Swimming">
                 <br>
                 <label for="Anime">Watching Anime</label>
                 <input type="checkbox" id="Anime" name="anime" value="Watching Anime">
@@ -46,8 +48,13 @@
                 <input type="checkbox" id="study" name="study" value="Studying">
             </fieldset>
             <br>
-            
+            <br>
+            <label>Age of yours</label>
+            <input type="number" min="0" max="100">
+            <br>
+            <br>    1
            <input type="submit">
+
         </fieldset>
     </form>
 </body>
