@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <fieldset style="text-align: center">
+            <legend style="text-align: center">User Details</legend>
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="username">
+            <br>
+            <br>
+            <label for="dob">Enter your DOB:</label>
+            <input type="date" id="dob" name="DOB">
+            <br>
+            <br>
+            <label for="address">Enter your address:</label>
+            <textarea type="text" id="address" name="useraddress" row="2" cols="30"></textarea>
+            <br>
+            <br>
+            <fieldset style="width:300px">
+                Select Gender: <br>
+                <label for="male">male</label>
+    <input type="radio" id="male" name="gender">
+    <br>
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender">
+    <br>
+    <label for="other">Other</label>
+    <input type="radio" id="other" name="gender">
+    <br>
+            </fieldset>
+            <br>
+            <fieldset style="width:300px">   Hobby of yours:
+                <br>
+                <label for="swim">Swimming </label>
+                <input type="checkbox" id="swim" name="swim">
+                <br>
+                <label for="Anime">Watching Anime</label>
+                <input type="checkbox" id="Anime" name="anime">
+                <br>
+                <label for="study">Studying</label>
+                <input type="checkbox" id="study" name="study">
+            </fieldset>
+            <br>
+            
+           <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>
