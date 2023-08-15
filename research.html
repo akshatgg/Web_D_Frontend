@@ -10,10 +10,45 @@
  padding-left: 500px;
  width: 100px;
 }
+.display{
+ display:inline-block;
+ max-width: 100px;
+ margin-left: 100px;
+}
+div:hover{
+    background-color:black;
+    color:white;    
+}
+input:focus{
+    margin-top: 49px;
+    background-color: aqua;
+    color:brown;
+}
+a:hover{
+    color:aqua;
+}
+a:active{
+    color:blue;
+}
+a:visited{
+    color:black;
+}
+    p::first-line{
+    color:rgb(255, 72, 0);
+    }
+    p::before{
+        content:"AKSHAT ";
+        color:blue;
+    }
 
 </style>
 <body>
     <div class="padding">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id debitis cupiditate iste.</div>
-    <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id debitis cupiditate iste.</div>
+    <div class="display">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id debitis cupiditate iste.</div>
+<br>
+    <input type="text"/>
+    <hr>
+    <a href="https://chat.openai.com/?model=text-davinci-002-render-sha"; target="blank">Chat Gpt</a>
+    <p class="try">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos laudantium explicabo iusto iste adipisci excepturi placeat nemo eos voluptate!</p>
 </body>
 </html>
