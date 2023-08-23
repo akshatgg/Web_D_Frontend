@@ -16,7 +16,9 @@
     <h4 id="ids">Rohan</h4>
     <h4>jim</h4>
 
-</body>
+    <p id="js"></p>
+        <button onclick="register()" id="jbl">Register</button>
+
     <script>    
 //id//
 let var1=document.getElementById("one")
@@ -40,7 +42,7 @@ var5.className="hello";
 var5.classList="mom dad papa";
 var5.setAttribute("title","yoooo")
 
-
+//append the child//
 let title=document.createElement("h1")
 title.style.fontSize="25px"
 title.className="name"
@@ -49,5 +51,36 @@ title.textContent="I am Akshat Gupta"
 console.log(title);
 document.body.appendChild(title);
 title.setAttribute("title", "Yoooo");
-    </script>
+
+//Remove the child//
+let ul=document.querySelector("ul")
+let lilist=document.querySelectorAll("li")
+console.log(lilist);
+for(let list of lilist){
+    ul.removeChild(list);
+}
+
+
+
+
+document.addEventListener("click" ,hello)
+function hello(){
+    document.getElementById("js").innerText= " Namaste bacho";
+}
+
+
+
+
+
+function register(){
+    document.getElementById("jbl").innerText="Thank yu";
+    document.getElementById("jbl").style.color="red";
+    document.getElementById("jbl").style.backgroundColor="black";
+    document.getElementById("jbl").style.padding="5px 10px 5px 10px"; 
+    document.getElementById("jbl").style.fontWeight="600"
+    document.getElementById("jbl").style.borderRadius="5px solid white";
+}
+
+</script>
+</body>
 </html>
