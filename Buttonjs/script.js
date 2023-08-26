@@ -18,6 +18,6 @@ return cont;
 
 function changecolor(){
     document.body.style.backgroundColor=randomcolor();
+    } 
     
-}
 btn.addEventListener("click" ,changecolor); 
