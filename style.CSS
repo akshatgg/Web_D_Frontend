@@ -13,5 +13,6 @@ h{
     /* border: 2px solid black; */
     width:150px;
     margin-left: 600px;
-
+     display: grid;
+     grid-auto-flow: column;
 }
