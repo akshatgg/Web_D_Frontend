@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+
+
+<style>
+    .border {
+        border: 80px black;
+        background-color: rgb(224, 217, 217);
+        height: auto;
+        width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+    }
+
+    .hei {
+        border-radius: 8px;
+        padding-top: 5px;
+        width: auto;
+        padding-bottom: 5px;
+        font-size: 19px;
+    }
+
+    .size {
+        font-size: 25px;
+    }
+
+    .head {
+        font-size: 40px;
+    }
+
+    .submit {
+        font-size: 20px;
+        margin-top: 1%;
+        border-radius: 8px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .Log {
+        font-size: 30px;
+        margin-top: 2%;
+        color: green;
+    }
+
+    .result {
+        font-size: 20px;
+    }
+</style>
+
+
+
+<body>
+    <div class="border">
+        <h1 class="head">BMI Calculator</h1>
+        <h2 class="size">Height (in cm)</h2>
+        <input placeholder="Height" class="hei" type="number" id="heights" required/>
+        <h2 class="size">Weight (in kg)</h2>
+        <input placeholder="Weight" class="hei" type="number" id="weights" required/>
+        <br>
+        <button class="submit"  id="submit">Calculate</button>
+        <div class="Log">Console Log:</div>
+        <div id="results" class="result"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            let height = parseFloat(document.getElementById("heights").value) / 100; // Convert height to meters
+            let weight = parseFloat(document.getElementById("weights").value);
+
+            let BMI = weight / (height * height);
+            console.log("Height:", height);
+            console.log("Weight:", weight);
+            console.log("BMI:", BMI);
+
+            // Display the result in the "results" div
+            document.getElementById("results").innerHTML = "BMI: " + BMI.toFixed(2);
+        }
+
+        let submit = document.getElementById("submit");
+        submit.addEventListener("click", calculate);
+    </script>
+</html>
