@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <script>
+      function validate() {
+        var textarea = document.getElementById("textArea").value;
+        var regex = /^[a-zA-Z\s]*$/; 
+        if (!regex.test(textarea)) {
+          alert(
+            "Please enter only alphabets (no digits or special characters) in the textarea."
+          );
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Form</h2>
+    <form onsubmit="validate()">
+      <label for="checkbox">Checkbox:</label>
+      <input type="checkbox" id="checkbox" name="checkbox" /><br /><br />
+      <label for="textArea">Textarea:</label><br />
+      <textarea id="textArea" name="textArea" rows="4" cols="50"></textarea
+      ><br /><br />
+
+      <label for="radioButton">Radio Button:</label>
+      <input type="radio" id="radioButton" name="radioButton" /><br /><br />
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
+

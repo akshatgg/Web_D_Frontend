@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Toggle Example</title>
+</head>
+<body>
+  <div>
+    <p id="loginStatus">Login Status: Logged Out</p>
+    <button id="loginButton">Log In</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize the login status from localStorage
+      const loginStatusElement = document.getElementById('loginStatus');
+      const loginButton = document.getElementById('loginButton');
+
+      const updateLoginStatus = () => {
+        const isLoggedIn = localStorage.getItem('login') === 'true';
+        loginStatusElement.textContent = `Login Status: ${isLoggedIn ? 'Logged In' : 'Logged Out'}`;
+        loginButton.textContent = isLoggedIn ? 'Log Out' : 'Log In';
+      };
+
+      loginButton.addEventListener('click', function() {
+        // Toggle the login status
+        const isLoggedIn = localStorage.getItem('login') || 'false';
+        const newLoginStatus = !isLoggedIn;
+        localStorage.setItem('login', newLoginStatus.toString());
+        updateLoginStatus();
+      });
+
+      // Initial update of the login status
+      updateLoginStatus();
+    });
+  </script>
+</body>
+</html>
